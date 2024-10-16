@@ -1,7 +1,8 @@
 import app from "./app.js";
 
-const port = process.env.PORT || 4000;  // Use the PORT environment variable or fallback to 4000
+// Use the PORT environment variable, fallback to 4000 if not set
+const port = process.env.PORT || 4000;
 
-app.listen(port, () => {
-  console.log(`Server listening at port ${port}`); // Log the port number
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server is running on port ${port}`);
 });
