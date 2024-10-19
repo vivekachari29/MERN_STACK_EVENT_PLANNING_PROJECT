@@ -24,7 +24,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Define the root route to handle GET requests to "/"
 app.get('/', (req, res) => {
-    res.send('Welcome to the Event Planning API!'); // Response for root URL
+    res.json({
+      success:true,
+      message:"habbibi Come to Dubai",  
+    });
 });
 
 // Use the message router for "/api/v1/message" routes
